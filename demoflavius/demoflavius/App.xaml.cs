@@ -44,7 +44,7 @@ namespace demoflavius_W8
     {
         // This MobileServiceClient has been configured to communicate with your Mobile Service's url
         // and application key. You're all set to start working with your Mobile Service!
-        public static MobileServiceClient MobileService = new MobileServiceClient("https://demoflavius.azure-mobile.net/", "BAnpBgjwvAiseBuqYzJohLfKjwSWbD28");
+        public static MobileServiceClient MobileService = new MobileServiceClient("url", "key");
         public static PushNotificationChannel Channel = null;
 
         public static readonly IMobileServiceTable<UserEntity> UsersTable = App.MobileService.GetTable<UserEntity>();

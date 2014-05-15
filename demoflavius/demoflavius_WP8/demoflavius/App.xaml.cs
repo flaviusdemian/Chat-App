@@ -37,7 +37,7 @@ namespace demoflavius
         /// <returns>The root frame of the Phone Application.</returns>
         public static PhoneApplicationFrame RootFrame { get; private set; }
 
-        public static MobileServiceClient MobileService = new MobileServiceClient("https://demoflavius.azure-mobile.net/", "BAnpBgjwvAiseBuqYzJohLfKjwSWbD28");
+        public static MobileServiceClient MobileService = new MobileServiceClient("url", "key");
         public static HttpNotificationChannel Channel { get; set; }
 
         public static readonly IMobileServiceTable<UserEntity> UsersTable = App.MobileService.GetTable<UserEntity>();

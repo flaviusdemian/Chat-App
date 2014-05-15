@@ -85,7 +85,6 @@
     <Content Include="demoflavius_HTML\images\online.png" />
     <Content Include="demoflavius_HTML\images\twitter.png" />
     <Content Include="demoflavius_HTML\images\windows.png" />
-    <Content Include="demoflavius_HTML\index.html" />
     <Content Include="demoflavius_HTML\js\azureMobileServicesModule.js" />
     <Content Include="demoflavius_HTML\js\applicationConstantsModule.js" />
     <Content Include="demoflavius_HTML\js\chatModule.js" />
@@ -103,6 +102,7 @@
     <Content Include="demoflavius_HTML\js\toastr.js" />
     <Content Include="demoflavius_HTML\sounds\chat_sound.mp3" />
     <Content Include="demoflavius_HTML\css\styles.css" />
+    <Content Include="demoflavius_HTML\index.html" />
     <Content Include="Scripts.txt" />
     <Content Include="Scripts\OldUserEntityScriptWithNotificationHub.js" />
     <Content Include="Scripts\ToastsWhenApplicationActive\Web.js" />

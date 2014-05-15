@@ -64,7 +64,7 @@ public class LoginActivity extends Activity
 			
 			try 
 			{
-				MyApplication.setMobileServiceClient(new MobileServiceClient("https://demoflavius.azure-mobile.net/", "BAnpBgjwvAiseBuqYzJohLfKjwSWbD28", LoginActivity.this));
+				MyApplication.setMobileServiceClient(new MobileServiceClient("url", "key", LoginActivity.this));
 				MyApplication.mUserEntryTable = MyApplication.getMobileServiceClient().getTable(UserEntity.class);
 				MyApplication.mMessageTable = MyApplication.getMobileServiceClient().getTable(Message.class);
 				MyApplication.mChannelTable = MyApplication.getMobileServiceClient().getTable(Channel.class);

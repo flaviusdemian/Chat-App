@@ -25,3 +25,30 @@ C:\Users\Flavius-Radu\Projects\Mobile Services\demoflavius\W8Tasks\obj\Debug\pri
 C:\Users\Flavius-Radu\Projects\Mobile Services\demoflavius\W8Tasks\obj\Debug\qualifiers.txt
 C:\Users\Flavius-Radu\Projects\Mobile Services\demoflavius\W8Tasks\obj\Debug\qualifiers.txt.intermediate
 C:\Users\Flavius-Radu\Projects\Mobile Services\demoflavius\W8Tasks\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\ChatApp\ap\demoflavius\W8Tasks\bin\Debug\W8Tasks.winmd
+C:\ChatApp\ap\demoflavius\W8Tasks\bin\Debug\W8Tasks.pdb
+C:\ChatApp\ap\demoflavius\W8Tasks\bin\Debug\W8Tasks.pri
+C:\ChatApp\ap\demoflavius\W8Tasks\bin\Debug\demo_flavius_Core.dll
+C:\ChatApp\ap\demoflavius\W8Tasks\bin\Debug\Newtonsoft.Json.dll
+C:\ChatApp\ap\demoflavius\W8Tasks\bin\Debug\NotificationsExtensions.winmd
+C:\ChatApp\ap\demoflavius\W8Tasks\bin\Debug\demo_flavius_Core.pdb
+C:\ChatApp\ap\demoflavius\W8Tasks\bin\Debug\NotificationsExtensions.pdb
+C:\ChatApp\ap\demoflavius\W8Tasks\bin\Debug\NotificationsExtensions.xml
+C:\ChatApp\ap\demoflavius\W8Tasks\bin\Debug\NotificationsExtensions.pri
+C:\ChatApp\ap\demoflavius\W8Tasks\bin\Debug\Newtonsoft.Json.xml
+C:\ChatApp\ap\demoflavius\W8Tasks\obj\Debug\W8Tasks.csprojResolveAssemblyReference.cache
+C:\ChatApp\ap\demoflavius\W8Tasks\obj\Debug\W8Tasks.winmd
+C:\ChatApp\ap\demoflavius\W8Tasks\obj\Debug\W8Tasks.pdb
+C:\ChatApp\ap\demoflavius\W8Tasks\obj\Debug\W8Tasks.winmdobj
+C:\ChatApp\ap\demoflavius\W8Tasks\obj\Debug\W8Tasks.compile.pdb
+C:\ChatApp\ap\demoflavius\W8Tasks\obj\Debug\priconfig.xml
+C:\ChatApp\ap\demoflavius\W8Tasks\obj\Debug\priconfig.xml.intermediate
+C:\ChatApp\ap\demoflavius\W8Tasks\obj\Debug\layout.resfiles
+C:\ChatApp\ap\demoflavius\W8Tasks\obj\Debug\layout.resfiles.intermediate
+C:\ChatApp\ap\demoflavius\W8Tasks\obj\Debug\resources.resfiles
+C:\ChatApp\ap\demoflavius\W8Tasks\obj\Debug\resources.resfiles.intermediate
+C:\ChatApp\ap\demoflavius\W8Tasks\obj\Debug\pri.resfiles
+C:\ChatApp\ap\demoflavius\W8Tasks\obj\Debug\pri.resfiles.intermediate
+C:\ChatApp\ap\demoflavius\W8Tasks\obj\Debug\qualifiers.txt
+C:\ChatApp\ap\demoflavius\W8Tasks\obj\Debug\qualifiers.txt.intermediate
+C:\ChatApp\ap\demoflavius\W8Tasks\obj\Debug\MultipleQualifiersPerDimensionFound.txt
