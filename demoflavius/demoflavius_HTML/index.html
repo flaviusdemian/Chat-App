@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8' />
+    <title>Chat Appp</title>
+    <link rel='stylesheet' href='css/toastr.css' />
+    <link rel='stylesheet' href='css/styles.css' />
+
+    <meta name='viewport' content='width=device-width' />
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script><![endif]-->
+</head>
+<body>
+    <div id='wrapper'>
+        <div id="header" class="clearfix">
+            <h1 id="title">Mobile Services Web Demo</h1>
+            <div id="logged-in">
+                <img width="64" height="64" style="position: absolute; top: 15px; left: 25px;" id="currentUserPicture" alt="picture" />
+                <p id="logged-inMessage">Welcome,  <span id="login-name"></span>.</p>
+                <button id="log-out" onclick="azureMobileServicesModule.logOut(); return false;">Log out</button>
+            </div>
+            <div id="logged-out">
+                <p id="logged-outMessage">You are not logged in. Please choose one of the following providers:</p>
+                <div id="socialMediaProviders">
+                    <button class="loginBtn" id="facebookBtn" onclick="azureMobileServicesModule.logIn('facebook'); return false;"></button>
+                    <button class="loginBtn" id="googleBtn" onclick="azureMobileServicesModule.logIn('google'); return false;"></button>
+                    <button class="loginBtn" id="twitterBtn" onclick="azureMobileServicesModule.logIn('twitter'); return false;"></button>
+                    <button class="loginBtn" id="microsoftAccountBtn" onclick="azureMobileServicesModule.logIn('microsoftaccount'); return false;"></button>
+                </div>
+            </div>
+        </div>
+
+        <div id="footer">
+            <audio controls id="audioSound" style="display: none;">
+                <source id="sound1" src="sounds/chat_sound.ogg" type="audio/ogg">
+                <source id="sound2" src="sounds/chat_sound.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+    </div>
+    <div id="leftChatContainer">
+        <ul id="chatArea" data-bind="foreach: availableUsers">
+            <li class="userEntry" data-bind="click: $root.startChat">
+                <img class="userImage" data-bind="attr: { src: picture }" width="24" height="24" />
+                <span class="userName" data-bind="text: name"></span>
+            </li>
+        </ul>
+    </div>
+
+    <div id="bottomChatContainer">
+
+        <ul id="chatAreaBottom" data-bind="foreach: availableExpandedChatEntries">
+            <li class="userEntry">
+                <div class="userEntryContainer">
+                    <div class="header">
+                        <span class="userName" data-bind="text: user.name"></span>
+                        <span class="closeChat" data-bind="click: $root.closeChat"></span>
+                    </div>
+                    <ul class="messages" data-bind="foreach: messages, attr: { id: $data.user.id }">
+                        <li class="messageEntry">
+                            <p class="messageEntryText" data-bind="text: content, css: sendByMe() == false ? 'bubbleLeft' : 'bubbleRight'"></p>
+                        </li>
+                    </ul>
+                    <input class="messageInput" data-bind="value: user.currentMessage, enterKey: $root.sendMessage"
+                        type="text" placeholder="type message here..." />
+                </div>
+            </li>
+        </ul>
+
+        <!-- ko if: $root.showExtraUsers() == true -->
+        <div id="minimizedUsers" data-bind="foreach: availableMinimizedChatEntries">
+            <div class="minimizedUsersEntry" data-bind="event: { mouseover: $root.adjustHoveredItemStyle, mouseout: $root.removeHoveredItemStyle }, attr: { id: $data.user.id + 'minimized' }">
+                <p class="extraUserName" data-bind="text: $data.user.name, click: $root.showDetailsMouseOver"></p>
+                <p class="removeMinimizedEntry" data-bind="click: $root.removeMinimizedEntry"></p>
+            </div>
+        </div>
+        <!-- /ko -->
+
+        <div id="extraUsersCount" data-bind=" style: { display: showNumberOfMinimizedUsers() == false ? 'none' : 'block' } ">
+            <p id="counter" data-bind="text: $root.availableMinimizedChatEntries().length, click: showExtraUsersClicked"></p>
+        </div>
+    </div>
+
+    <script src='js/jquery-1.9.1.js'></script>
+    <script src='js/jqueryUI.js'></script>
+    <script src='http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.1.0.min.js'></script>
+    <script src='js/knockout.js'></script>
+    <script src='js/json2.js'></script>
+    <script src='js/guidGenerator.js'></script>
+
+    <script src='js/applicationConstantsModule.js'></script>
+    <script src='js/identityProviderParserModule.js'></script>
+    <script src='js/chatModule.js'></script>
+    <script src='js/azureMobileServicesModule.js'></script>
+    <script src='js/webapiModule.js'></script>
+    <script src='js/websocketsModule.js'></script>
+    <script src='js/knockoutViewModel.js'></script>
+
+    <script src='js/page.js'></script>
+    <script src='js/toastr.js'></script>
+</body>
+</html>

@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{097624F6-3FEE-48DE-8043-CB1EABA5417D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>demo_flavius_Core</RootNamespace>
+    <AssemblyName>demo_flavius_Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile78</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Design\DesignDataService.cs" />
+    <Compile Include="Helpers\ApiService.cs" />
+    <Compile Include="Helpers\ApplicationConstants.cs" />
+    <Compile Include="Helpers\IdentityProviderParser.cs" />
+    <Compile Include="Helpers\ToastMessage.cs" />
+    <Compile Include="Interfaces\IApplicationDataProvider.cs" />
+    <Compile Include="Interfaces\IDataService.cs" />
+    <Compile Include="Interfaces\INavigationService.cs" />
+    <Compile Include="Models\Channel.cs" />
+    <Compile Include="Models\Enums.cs" />
+    <Compile Include="Models\Friend.cs" />
+    <Compile Include="Helpers\IdentityProviderConverter.cs" />
+    <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\UserEntityProfileCompletion.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\UserEntity.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\portable-net45+wp80+win8\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\portable-net40+sl4+win8+wp71\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\portable-net40+sl4+win8+wp71\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.18\lib\portable-net40+sl4+win8+wp71\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="demoflavius_HTML\server\launch-linux.sh" />
+    <None Include="demoflavius_HTML\server\launch-mac.command" />
+    <None Include="demoflavius_HTML\server\launch-windows.lnk" />
+    <None Include="demoflavius_HTML\server\start-iisexpress.ps1" />
+    <None Include="demoflavius_HTML\sounds\chat_sound.ogg" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="demoflavius_HTML\images\chat.png" />
+    <Content Include="demoflavius_HTML\images\close.png" />
+    <Content Include="demoflavius_HTML\images\closeMinimized.png" />
+    <Content Include="demoflavius_HTML\images\facebook.png" />
+    <Content Include="demoflavius_HTML\images\google.png" />
+    <Content Include="demoflavius_HTML\images\ninja.jpg" />
+    <Content Include="demoflavius_HTML\images\offline.png" />
+    <Content Include="demoflavius_HTML\images\online.png" />
+    <Content Include="demoflavius_HTML\images\twitter.png" />
+    <Content Include="demoflavius_HTML\images\windows.png" />
+    <Content Include="demoflavius_HTML\index.html" />
+    <Content Include="demoflavius_HTML\js\azureMobileServicesModule.js" />
+    <Content Include="demoflavius_HTML\js\applicationConstantsModule.js" />
+    <Content Include="demoflavius_HTML\js\chatModule.js" />
+    <Content Include="demoflavius_HTML\js\identityProviderParserModule.js" />
+    <Content Include="demoflavius_HTML\js\websocketsModule.js" />
+    <Content Include="demoflavius_HTML\js\webapiModule.js" />
+    <Content Include="demoflavius_HTML\js\knockoutViewModel.js" />
+    <Content Include="demoflavius_HTML\js\jquery-1.9.1.js" />
+    <Content Include="demoflavius_HTML\js\jqueryUI.js" />
+    <Content Include="demoflavius_HTML\js\json2.js" />
+    <Content Include="demoflavius_HTML\js\knockout.js" />
+    <Content Include="demoflavius_HTML\js\guidGenerator.js" />
+    <Content Include="demoflavius_HTML\js\page.js" />
+    <Content Include="demoflavius_HTML\css\toastr.css" />
+    <Content Include="demoflavius_HTML\js\toastr.js" />
+    <Content Include="demoflavius_HTML\sounds\chat_sound.mp3" />
+    <Content Include="demoflavius_HTML\css\styles.css" />
+    <Content Include="Scripts.txt" />
+    <Content Include="Scripts\OldUserEntityScriptWithNotificationHub.js" />
+    <Content Include="Scripts\ToastsWhenApplicationActive\Web.js" />
+    <Content Include="Scripts\ToastsWhenApplicationActive\Android.js" />
+    <Content Include="Scripts\Broadcast.js" />
+    <Content Include="Scripts\ToastsWhenApplicationActive\WP8.js" />
+    <Content Include="Scripts\ToastsWhenApplicationActive\W8.js" />
+    <Content Include="Scripts\ToastsWhenApplicationInactive\Android.js" />
+    <Content Include="Scripts\ToastsWhenApplicationInactive\W8.js" />
+    <Content Include="Scripts\ToastsWhenApplicationInactive\Web.js" />
+    <Content Include="Scripts\ToastsWhenApplicationInactive\WP8.js" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.13\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,14 @@
+<XamlCompilerSaveState>
+  <ReferenceAssemblyList>
+    <ReferenceAssembly PathName="c:\chatapp\chat-app\demoflavius\packages\coding4fun.toolkit.controls.2.0.7\lib\windows8\coding4fun.toolkit.controls.dll" HashGuid="130201a2-c8a1-1ba1-bd40-eb94fe3e66a2" />
+    <ReferenceAssembly PathName="c:\chatapp\chat-app\demoflavius\packages\mvvmlightlibs.4.2.30.0\lib\netcore45\galasoft.mvvmlight.extras.win8.dll" HashGuid="f1644a38-c628-2fde-5283-4e777988788a" />
+    <ReferenceAssembly PathName="c:\chatapp\chat-app\demoflavius\packages\mvvmlightlibs.4.2.30.0\lib\netcore45\galasoft.mvvmlight.win8.dll" HashGuid="0e89fba1-9317-cee7-b759-aaaceabef9d3" />
+    <ReferenceAssembly PathName="c:\chatapp\chat-app\demoflavius\packages\mvvmlightlibs.4.2.30.0\lib\netcore45\microsoft.practices.servicelocation.dll" HashGuid="d3a03fc5-3dbc-3307-e1a1-f478f8f2a94d" />
+    <ReferenceAssembly PathName="c:\chatapp\chat-app\demoflavius\packages\windowsazure.messaging.managed.0.1.7.6\lib\netcore45\microsoft.windowsazure.messaging.managed.dll" HashGuid="7c9781b2-8bd9-179a-93b9-f7b7415039a2" />
+    <ReferenceAssembly PathName="c:\chatapp\chat-app\demoflavius\packages\windowsazure.mobileservices.1.1.3\lib\netcore45\microsoft.windowsazure.mobile.dll" HashGuid="229f604e-67f1-c4fe-cd43-3dc09ffb1929" />
+    <ReferenceAssembly PathName="c:\chatapp\chat-app\demoflavius\packages\windowsazure.mobileservices.1.1.3\lib\netcore45\microsoft.windowsazure.mobile.ext.dll" HashGuid="dca1ec5a-5f36-27b9-f27b-6bc6a6f62758" />
+    <ReferenceAssembly PathName="c:\chatapp\chat-app\demoflavius\packages\newtonsoft.json.6.0.1\lib\netcore45\newtonsoft.json.dll" HashGuid="09c236d1-053d-8905-8ef0-17027540c930" />
+    <ReferenceAssembly PathName="c:\chatapp\chat-app\demoflavius\packages\microsoft.net.http.2.2.18\lib\win8\system.net.http.extensions.dll" HashGuid="b50282f8-b9f8-4408-8d49-ba2efe301624" />
+    <ReferenceAssembly PathName="c:\chatapp\chat-app\demoflavius\packages\microsoft.net.http.2.2.18\lib\win8\system.net.http.primitives.dll" HashGuid="7b71418d-e056-7613-c839-85fb8f6472a6" />
+  </ReferenceAssemblyList>
+</XamlCompilerSaveState>

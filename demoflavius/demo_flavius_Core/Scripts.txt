@@ -1,0 +1,161 @@
+﻿function insert(item, user, request){ 
+    
+    console.log(JSON.stringify(user));
+     request.execute({
+        success: function() {
+            request.respond();
+            //sendNotifications(item);
+        }
+    });
+}
+
+
+function sendNotifications(item) {
+    var sql = "SELECT channel, registrationId, deviceType FROM Channel "+
+        "WHERE item.channel != channel AND item.registrationId !=registrationId";
+    var userOnlineText = "A new user is online!";
+    mssql.query(sql, {
+        success: function(results) {
+            results.forEach(function(entry) {
+                if(entry.deviceType === 0)  //Windows Phone 8
+                {
+                   push.mpns.sendFlipTile(entry.channel, {
+                   title: userOnlineText
+                    }, {
+                        success: function(pushResponse) {
+                            console.log("Sent push to WP8 sent", pushResponse);
+                        }, error: function(error) {
+                            console.log('Error sending push notification: ', error);
+                        }
+                    });
+                }
+                
+                if(entry.deviceType === 1)  //Windows8
+                {
+                     push.wns.sendToastText04(entry.channel, {
+                        text1: userOnlineText
+                    }, {
+                        success: function(pushResponse) {
+                            console.log("Sent push to Windows8:", pushResponse);
+                        }, error: function(error) {
+                            console.log('Error sending push notification: ', error);
+                        }
+                    });
+                }
+                
+                if(item.DeviceType === 2) //Android
+                {
+                   push.gcm.send(entry.registrationId, userOnlineText, {
+                        success: function(response) {
+                            console.log('Push notification to Android sent: ', response);
+                        }, error: function(error) {
+                            console.log('Error sending push notification: ', error);
+                        }
+                    });
+                }
+                if(item.DeviceType === 3)
+                {
+                    //web
+                }
+                });
+            },
+        error: function(err) {
+            console.log("error is: " + err);
+            }
+        }) 
+    }
+
+
+	------------------------------------------------------------------------------------------------------------------------------------------
+
+
+	function insert(item, user, request){
+    
+    console.log("data: " + JSON.stringify(item));
+     request.execute({
+        success: function() {
+            request.respond();
+            sendBroadcastNotifications(item);
+        }
+    });
+}
+
+function sendBroadcastNotifications(item) {
+    var sql = "SELECT channel, registrationId, deviceType FROM Channels "+
+        "WHERE item.channel != channel AND item.registrationId !=registrationId";
+    var userOnlineText = "A new user is online!";
+    mssql.query(sql, {
+        success: function(results) {
+            results.forEach(function(entry) {
+                if(entry.deviceType === 0)  //Windows Phone 8
+                {
+                   push.mpns.sendFlipTile(entry.channel, {
+                   title: userOnlineText
+                    }, {
+                        success: function(pushResponse) {
+                            console.log("Sent push to WP8 sent", pushResponse);
+                        }, error: function(error) {
+                            console.log('Error sending push notification: ', error);
+                        }
+                    });
+                }
+                
+                if(entry.deviceType === 1)  //Windows8
+                {
+                     push.wns.sendToastText04(entry.channel, {
+                        text1: userOnlineText
+                    }, {
+                        success: function(pushResponse) {
+                            console.log("Sent push to Windows8:", pushResponse);
+                        }, error: function(error) {
+                            console.log('Error sending push notification: ', error);
+                        }
+                    });
+                }
+                
+                if(item.DeviceType === 2) //Android
+                {
+                   push.gcm.send(entry.registrationId, userOnlineText, {
+                        success: function(response) {
+                            console.log('Push notification to Android sent: ', response);
+                        }, error: function(error) {
+                            console.log('Error sending push notification: ', error);
+                        }
+                    });
+                }
+                if(item.DeviceType === 3)
+                {
+                    //web
+                }
+                });
+            },
+        error: function(err) {
+            console.log("error is: " + err);
+            }
+        }) 
+    }
+
+	
+
+	------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+	
+
+	------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+	
+
+	------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+	
+
+	------------------------------------------------------------------------------------------------------------------------------------------
+

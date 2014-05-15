@@ -1,0 +1,526 @@
+/*css reset*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*end css reset*/
+
+/* Reset and define common styles */
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica;
+    background-color: #525252;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    background: #0f0;
+    height: 100%;
+}
+
+button {
+    border: 1px solid #999;
+    color: #555;
+    background-color: #F4F4FA;
+    padding: 0 10px;
+}
+
+    button:hover {
+        background-color: white;
+    }
+
+input[type=text], input:not([type]) {
+    padding: 0 10px;
+    text-overflow: ellipsis;
+}
+
+/* Main page structure and masthead style */
+#wrapper {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #00abeb;
+    position: relative;
+}
+
+/* For modern browsers */
+.container:before,
+.container:after {
+    content: "";
+    display: table;
+}
+
+.container:after {
+    clear: both;
+}
+/* For IE 6/7 (trigger hasLayout) */
+.container {
+    zoom: 1;
+}
+
+
+#header {
+    padding: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+    #header div {
+        float: right;
+        clear: both;
+    }
+
+    #header h1, #header h2 {
+        float: left;
+        clear: left;
+    }
+
+header h1 {
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #545353;
+    font-size: 28px;
+}
+
+header h2 {
+    text-transform: uppercase;
+    font-weight: normal;
+    color: white;
+    font-size: 20px;
+}
+
+#summary {
+    text-align: center;
+    padding: 8px 0;
+}
+
+/* Footer */
+#footer {
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 20px;
+}
+
+    #footer a {
+        color: #666;
+        display: block;
+    }
+
+#errorlog {
+    color: red;
+    font-weight: bold;
+    padding: 8px;
+    display: inline-block;
+    text-align: left;
+}
+
+#leftChatContainer {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    right: 0;
+    height: 100%;
+    border: 1px solid #525252;
+    width: 250px;
+}
+
+    #leftChatContainer #chatArea {
+        float: left;
+        width: 100%;
+    }
+
+    #leftChatContainer .userEntry {
+        padding: 3px 7px;
+        float: left;
+        clear: left;
+        width: 100%;
+    }
+
+        #leftChatContainer .userEntry .userImage {
+            float: left;
+        }
+
+        #leftChatContainer .userEntry .userName {
+            float: left;
+            margin-left: 5px;
+            line-height: 30px;
+            margin-top: -4px;
+        }
+
+        #leftChatContainer .userEntry .userState {
+            float: right;
+            width: 12px;
+            height: 12px;
+        }
+
+#bottomChatContainer {
+    display: none;
+    overflow: visible !important;
+    position: absolute;
+    bottom: 0;
+    right: 251px;
+    height: 298px;
+    overflow-x: scroll;
+    background-color: white;
+}
+
+    #bottomChatContainer #chatAreaBottom {
+        float: left;
+        width: 100%;
+        margin-top: 3px;
+        overflow: visible !important;
+    }
+
+    #bottomChatContainer .userEntry {
+        padding: 1px 3px;
+        float: right;
+        width: 265px;
+        height: 280px;
+        border: 1px solid #525252;
+        background-color: #6e84b5;
+        position: relative;
+        margin-left: 2px;
+        overflow: visible !important;
+    }
+
+        #bottomChatContainer .userEntry .header {
+            float: left;
+            position: relative;
+            width: 100%;
+        }
+
+
+            #bottomChatContainer .userEntry .header .userName {
+                padding: 3px 7px;
+                float: left;
+                clear: left;
+                width: 90%;
+                background-color: #6e84b5;
+            }
+
+            #bottomChatContainer .userEntry .header .closeChat {
+                background: url('../images/close.png') 0px -2px no-repeat;
+                width: 24px;
+                height: 24px;
+                float: right;
+                position: absolute;
+                right: 0;
+                top: 0;
+            }
+
+        #bottomChatContainer .userEntry .messageInput {
+            padding: 3px 7px;
+            float: left;
+            clear: left;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+.userEntry .messages {
+    float: left;
+    overflow-x: hidden;
+    overflow-y: visible;
+    background-color: white;
+    width: 100%;
+    height: 225px;
+}
+
+.userEntry .messageEntry {
+    float: left;
+    clear: left;
+    width: 100%;
+    margin: 3px;
+}
+
+    .userEntry .messageEntry .messageEntryText {
+        float: left;
+    }
+
+
+/*chat bubbles*/
+
+.bubbleRight {
+    position: relative;
+    float: right !important;
+    /*width: auto;*/
+    max-width: 235px !important;
+    height: auto;
+    padding: 5px 10px;
+    margin-right: 15px;
+    background: #cce1fe;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+}
+
+    .bubbleRight:after {
+        content: "";
+        position: absolute;
+        top: 7px;
+        right: -15px;
+        border-style: solid;
+        border-width: 6px 0 6px 15px;
+        border-color: transparent #cce1fe;
+        display: block;
+        width: 0;
+        z-index: 1;
+    }
+
+.bubbleLeft {
+    position: relative;
+    float: left !important;
+    /*width: auto;*/
+    max-width: 235px !important;
+    height: auto;
+    padding: 5px 10px;
+    margin-left: 15px;
+    background: #cce1fe;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+}
+
+    .bubbleLeft:after {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: -15px;
+        border-style: solid;
+        border-width: 6px 15px 6px 0;
+        border-color: transparent #cce1fe;
+        display: block;
+        width: 0;
+        z-index: 1;
+    }
+
+/*end chat bubbles*/
+
+.red {
+    background-color: red;
+}
+
+.blue {
+    background-color: blue;
+}
+
+
+#facebookBtn {
+    background: url('../images/facebook.png') no-repeat;
+    width: 48px;
+    height: 48px;
+}
+
+#googleBtn {
+    background: url('../images/google.png') no-repeat;
+    width: 48px;
+    height: 48px;
+}
+
+#twitterBtn {
+    background: url('../images/twitter.png') no-repeat;
+    width: 48px;
+    height: 48px;
+}
+
+#microsoftAccountBtn {
+    background: url('../images/windows.png') no-repeat;
+    width: 48px;
+    height: 48px;
+}
+
+#title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+#logged-out {
+    float: left;
+    clear: left;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#logged-outMessage {
+    float: left;
+    clear: both;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+#socialMediaProviders {
+    float: left !important;
+    clear: both;
+    margin-left: 200px;
+}
+
+.loginBtn {
+    margin: 10px 15px;
+    float: left;
+    border: 1px solid #525252;
+}
+
+#logged-in {
+    float: left;
+    clear: left;
+    margin-top: 20px;
+    width: 100%;
+}
+
+#logged-inMessage {
+    float: left;
+    clear: both;
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+#log-out {
+    float: right;
+    top: 42px;
+    position: absolute;
+    padding: 10px;
+    right: 25px;
+}
+
+
+#currentUserPicture {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 15px;
+    left: 25px;
+}
+
+.userEntryContainer {
+    float: left;
+    width: 100%;
+}
+
+.smallWidthNumber {
+    float: left;
+    clear: left;
+    border: 1px solid red;
+}
+
+.extraUserName {
+    float: left;
+    clear: left;
+}
+
+#extraUsersCount {
+    position: absolute;
+    left: 20px;
+    bottom: 10px;
+    height: 27px;
+    width: 47px;
+    background: url('../images/chat.png') center no-repeat;
+}
+
+    #extraUsersCount #counter {
+        margin-top: 7px;
+    }
+
+#minimizedUsers {
+    position: absolute;
+    left: 17px;
+    bottom: 49px;
+    padding: 5px 3px;
+    border: 1px solid cyan;
+    width: 230px;
+    z-index: 999;
+    color: white;
+    background-color: #525252;
+}
+
+    #minimizedUsers .extraUserName {
+        padding: 3px 0;
+        float: left;
+    }
+
+    #minimizedUsers .removeMinimizedEntry {
+        background: url('../images/closeMinimized.png') 2px 4px no-repeat;
+        float: right;
+        height: 22px;
+        width: 22px;
+        margin-right: -4px;
+    }
+
+.minimizedUsersEntry {
+    position: relative;
+    width: 100%;
+    float: left;
+    clear: left;
+}
+
+.selectedItem {
+    background-color: dodgerblue;
+}

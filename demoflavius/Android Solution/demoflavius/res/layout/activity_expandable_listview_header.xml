@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE project>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/GreenDarkPale" >
+
+    <ImageView
+        android:id="@+id/current_customer_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerVertical="true"
+        android:layout_margin="5dp"
+        android:background="#444"
+        android:contentDescription="@string/IMAGE_CONTENT_DESCRIPTION_DECORATIVE"
+        android:padding="3dp"
+        android:src="@drawable/linkedtranslators_user" />
+
+    <TextView
+        android:id="@+id/current_customer_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:layout_toRightOf="@+id/current_customer_image"
+        android:maxLines="1"
+        android:text="Name"
+        android:textColor="@android:color/white"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/current_customer_location"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/current_customer_name"
+        android:layout_toRightOf="@+id/current_customer_image"
+        android:ellipsize="end"
+        android:maxLines="3"
+        android:text="Timisoara, Romania"
+        android:textColor="@android:color/white"
+        android:textSize="13sp" />
+
+</RelativeLayout>

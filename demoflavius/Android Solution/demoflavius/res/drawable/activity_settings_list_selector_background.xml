@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE project>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item    android:state_selected="true" 
+    		 android:state_focused="false"
+        	 android:drawable="@color/BlueViolet" />
+    
+    <item    android:state_focused="true" 
+  			 android:state_selected="false" 
+        	 android:drawable="@android:color/transparent" />
+</selector>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE project>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="fill_parent"
+   android:layout_height="wrap_content"
+   android:orientation="vertical"
+   android:background="@color/DarkGray">
+    
+    <TextView
+       android:id="@+id/settings_section_title"
+       style="?android:attr/listSeparatorTextViewStyle"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:text="Section"
+       android:textSize="18sp"
+       android:paddingTop="7dp"
+       android:paddingBottom="7dp"
+       android:background="@color/DarkGray"
+       android:textColor="@color/Yellow"/>
+    
+</LinearLayout>

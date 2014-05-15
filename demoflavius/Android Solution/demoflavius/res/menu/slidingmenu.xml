@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE project>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <item android:id="@+id/action_chat"
+          android:icon="@drawable/linkedtranslators_chaticonsmall"
+          android:title="@string/action_chat"
+          android:showAsAction="always" />
+</menu>

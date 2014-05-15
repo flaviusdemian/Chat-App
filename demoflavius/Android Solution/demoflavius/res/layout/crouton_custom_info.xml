@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE project>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tv_croutonLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/GreenDarkPale"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+    <ImageView
+        android:id="@+id/iv_crutonCustomer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/crouton"
+        android:src="@drawable/linkedtranslators_reportaproblemicon" />
+
+    <LinearLayout
+        android:id="@+id/tv_croutonInnerLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_croutonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_message"
+            android:textColor="#fff" />
+
+        <TextView
+            android:id="@+id/tv_tapToReply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tap to reply" />
+
+    </LinearLayout>
+
+</LinearLayout>

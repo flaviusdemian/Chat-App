@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">demoflavius</string>
+    <string name="add_textbox_hint">Add a ToDo item</string>
+    <string name="add_button_text">Add</string>
+    <string name="mobile_services">Mobile Services </string>
+    <string name="menu_refresh">Refresh</string>
+    <string name="checkbox_text">Item Text</string>
+    <string name="title_activity_sliding_menu_parent">SlidingMenuParentActivity</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="crouton">Crouton</string>
+    <string name="custom_message">Even with message!</string>
+    <string name="action_chat">Chat</string>
+    <string name="IMAGE_CONTENT_DESCRIPTION_DECORATIVE">“This is just a decorative image”</string>
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="title_activity_chat">ChatActivity</string>
+    <string name="login_title">Mobile Services Android Demo</string>
+    <string name="login_subtitle">Please select an identity provider</string>
+
+</resources>
